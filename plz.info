@@ -46,6 +46,8 @@ Usage
 
 Changelog
 
+* 0.4-pre: 04-pre. 
+* 0.3: 03. 
 * 0.2.1: 021. 
 * 0.2: 02. 
 * 0.1: 01. 
@@ -267,14 +269,41 @@ File: README.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 * Menu:
 
+* 0.4-pre: 04-pre. 
+* 0.3: 03. 
 * 0.2.1: 021. 
 * 0.2: 02. 
 * 0.1: 01. 
 
 
-File: README.info,  Node: 021,  Next: 02,  Up: Changelog
+File: README.info,  Node: 04-pre,  Next: 03,  Up: Changelog
 
-3.1 0.2.1
+3.1 0.4-pre
+===========
+
+*Internal*
+   • Test suite explicitly tests with both HTTP/1.1 and HTTP/2.
+
+
+File: README.info,  Node: 03,  Next: 021,  Prev: 04-pre,  Up: Changelog
+
+3.2 0.3
+=======
+
+*Additions*
+   • Handle HTTP proxy headers from Curl.  (#2
+     (https://github.com/alphapapa/plz.el/issues/2).  Thanks to Alan
+     Third (https://github.com/alanthird) and Sawyer Zheng
+     (https://github.com/sawyerzheng) for reporting.)
+
+   *Fixes*
+   • Replaced words not in Ispell’s default dictionaries (so ‘checkdoc’
+     linting succeeds).
+
+
+File: README.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
+
+3.3 0.2.1
 =========
 
 *Fixes*
@@ -283,7 +312,7 @@ File: README.info,  Node: 021,  Next: 02,  Up: Changelog
 
 File: README.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
-3.2 0.2
+3.4 0.2
 =======
 
 *Added*
@@ -292,7 +321,7 @@ File: README.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
 File: README.info,  Node: 01,  Prev: 02,  Up: Changelog
 
-3.3 0.1
+3.5 0.1
 =======
 
 Initial release.
@@ -352,22 +381,24 @@ GPLv3
 
 Tag Table:
 Node: Top199
-Node: Installation1072
-Node: GNU ELPA1215
-Node: Manual1461
-Node: Usage1767
-Node: Examples2268
-Node: Functions3635
-Node: Queueing6530
-Node: Tips7788
-Node: Changelog8089
-Node: 0218242
-Node: 028380
-Node: 018509
-Node: Credits8603
-Node: Development8969
-Node: Copyright assignment9483
-Node: License10071
+Node: Installation1104
+Node: GNU ELPA1247
+Node: Manual1493
+Node: Usage1799
+Node: Examples2300
+Node: Functions3667
+Node: Queueing6562
+Node: Tips7820
+Node: Changelog8121
+Node: 04-pre8306
+Node: 038472
+Node: 0218924
+Node: 029073
+Node: 019202
+Node: Credits9296
+Node: Development9662
+Node: Copyright assignment10176
+Node: License10764
 
 End Tag Table
 
