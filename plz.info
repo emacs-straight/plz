@@ -281,8 +281,25 @@ File: README.info,  Node: 04-pre,  Next: 03,  Up: Changelog
 3.1 0.4-pre
 ===========
 
-*Internal*
+*Additions*
+   • Support for HTTP ‘HEAD’ requests.  (Thanks to Inc.  for
+     sponsoring.)
+
+   *Changes*
+   • Allow sending ‘POST’ and ‘PUT’ requests without bodies.  (#16
+     (https://github.com/alphapapa/plz.el/issues/16).  Thanks to Joseph
+     Turner (https://github.com/josephmturner) for reporting.  Thanks to
+     Inc.  for sponsoring.)
+
+   *Fixes*
+   • All 2xx HTTP status codes are considered successful.  (#17
+     (https://github.com/alphapapa/plz.el/issues/17).  Thanks to Joseph
+     Turner (https://github.com/josephmturner) for reporting.  Thanks to
+     Inc.  for sponsoring.)
+
+   *Internal*
    • Test suite explicitly tests with both HTTP/1.1 and HTTP/2.
+   • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
 File: README.info,  Node: 03,  Next: 021,  Prev: 04-pre,  Up: Changelog
@@ -391,14 +408,14 @@ Node: Queueing6562
 Node: Tips7820
 Node: Changelog8121
 Node: 04-pre8306
-Node: 038472
-Node: 0218924
-Node: 029073
-Node: 019202
-Node: Credits9296
-Node: Development9662
-Node: Copyright assignment10176
-Node: License10764
+Node: 039159
+Node: 0219611
+Node: 029760
+Node: 019889
+Node: Credits9983
+Node: Development10349
+Node: Copyright assignment10863
+Node: License11451
 
 End Tag Table
 

@@ -308,6 +308,50 @@
     (should (string-match "curl" .headers.User-Agent))
     (should (equal "plz-test-header-value" .headers.X-Plz-Test-Header))))
 
+;;;;; HEAD requests
+
+;; NOTE: httpbin.org doesn't appear to support a "/head" endpoint,
+;; so we'll use "/get".
+
+(plz-deftest plz-head-without-headers ()
+  ;; I'm not sure how useful it may be to make a HEAD request without
+  ;; caring about the headers, but perhaps it could be useful as a
+  ;; lightweight way to test a server's presence, so we should
+  ;; probably support it.  This merely tests that no error is
+  ;; signaled, which should mean that the HEAD request succeeded.
+  (should (plz 'head "https://httpbin.org/get")))
+
+(plz-deftest plz-head-as-response ()
+  (let ((response (plz 'head "https://httpbin.org/get"
+                    :as 'response)))
+    (should (equal "application/json"
+                   (alist-get 'content-type
+                              (plz-response-headers response))))))
+
+;;;;; POST requests
+
+(plz-deftest plz-post-empty-body ()
+  (should (equal ""
+                 (alist-get 'data
+                            (json-read-from-string
+                             (plz 'post "https://httpbin.org/post")))))
+  (should (equal "application/json"
+                 (alist-get 'content-type
+                            (plz-response-headers
+                             (plz 'post "https://httpbin.org/post" :as 'response))))))
+
+;;;;; Status codes
+
+(plz-deftest plz-201-succeeds ()
+  ;; This merely tests that a 201 response does not signal an error.
+  (should (plz 'get "https://httpbin.org/status/201")))
+
+(plz-deftest plz-400-errors ()
+  (should-error (plz 'get "https://httpbin.org/status/400")))
+
+(plz-deftest plz-500-errors ()
+  (should-error (plz 'get "https://httpbin.org/status/500")))
+
 ;;;;; Errors
 
 (plz-deftest plz-get-curl-error nil
