@@ -96,8 +96,8 @@
 ;;;; Errors
 
 ;; FIXME: `condition-case' can't catch these...?
-(define-error 'plz-curl-error "Curl error")
-(define-error 'plz-http-error "HTTP error")
+(define-error 'plz-curl-error "plz: Curl error")
+(define-error 'plz-http-error "plz: HTTP error")
 
 ;;;; Structs
 
@@ -373,7 +373,8 @@ NOQUERY is passed to `make-process', which see."
                                       (list (cons "--dump-header" "-")
                                             (cons "--request" (upcase (symbol-name method)))))
                                      ('head
-                                      (list (cons "--head" ""))))))
+                                      (list (cons "--head" "")
+                                            (cons "--request" "HEAD"))))))
          (curl-config (cl-loop for (key . value) in curl-config-args
                                concat (format "%s \"%s\"\n" key value)))
          (decode (pcase as
@@ -382,6 +383,7 @@ NOQUERY is passed to `make-process', which see."
          sync-p)
     (when (eq 'sync then)
       (setf sync-p t
+            ;; FIXME: For sync requests, `else' should be forced nil.
             then (lambda (result)
                    (setf plz-result result))))
     (with-current-buffer (generate-new-buffer " *plz-request-curl*")
@@ -395,6 +397,9 @@ NOQUERY is passed to `make-process', which see."
                                    :command (append (list plz-curl-program) curl-command-line-args)
                                    :connection-type 'pipe
                                    :sentinel #'plz--sentinel
+                                   ;; FIXME: Set the stderr process sentinel to ignore to prevent
+                                   ;; "process finished" garbage in the buffer (response body).  See:
+                                   ;; <https://stackoverflow.com/questions/42810755/how-to-remove-process-finished-message-from-make-process-or-start-process-in-e>.
                                    :stderr (current-buffer)
                                    :noquery noquery))
             ;; The THEN function is called in the response buffer.
@@ -671,7 +676,7 @@ node `(elisp) Sentinels').  Kills the buffer before returning."
                ;; (for now, anyway).
                (_ (let ((err (make-plz-error :response (plz--response))))
                     (pcase-exhaustive plz-else
-                      (`nil (signal 'plz-http-error err))
+                      (`nil (signal 'plz-http-error (list "plz--sentinel: HTTP error" err)))
                       ((pred functionp) (funcall plz-else err)))))))
 
             ((or (and (pred numberp) code)
@@ -684,7 +689,7 @@ node `(elisp) Sentinels').  Kills the buffer before returning."
                     (err (make-plz-error :curl-error (cons curl-exit-code curl-error-message))))
                (pcase-exhaustive plz-else
                  ;; FIXME: Returning a plz-error structure which has a curl-error slot, wrapped in a plz-curl-error, is confusing.
-                 (`nil (signal 'plz-curl-error err))
+                 (`nil (signal 'plz-curl-error (list "plz--sentinel: Curl error" err)))
                  ((pred functionp) (funcall plz-else err)))))
 
             ((and (or "killed\n" "interrupt\n") status)
@@ -694,7 +699,7 @@ node `(elisp) Sentinels').  Kills the buffer before returning."
                                ("interrupt\n" "curl process interrupted")))
                     (err (make-plz-error :message message)))
                (pcase-exhaustive plz-else
-                 (`nil (signal 'plz-curl-error err))
+                 (`nil (signal 'plz-curl-error (list "plz--sentinel: Curl error" err)))
                  ((pred functionp) (funcall plz-else err)))))))
       (when finally
         (funcall finally))
