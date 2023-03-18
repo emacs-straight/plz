@@ -46,7 +46,7 @@ Usage
 
 Changelog
 
-* 0.4-pre: 04-pre. 
+* 0.4: 04. 
 * 0.3: 03. 
 * 0.2.1: 021. 
 * 0.2: 02. 
@@ -199,11 +199,12 @@ File: README.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usag
      request, in which case the result is returned directly.
 
      ‘ELSE’ is an optional callback function called when the request
-     fails with one argument, a ‘plz-error’ struct.  If ‘ELSE’ is nil,
-     an error is signaled when the request fails, either
-     ‘plz-curl-error’ or ‘plz-http-error’ as appropriate, with a
-     ‘plz-error’ struct as the error data.  For synchronous requests,
-     this argument is ignored.
+     fails (i.e.  if curl fails, or if the HTTP response has a non-2xx
+     status code).  It is called with one argument, a ‘plz-error’
+     structure.  If ‘ELSE’ is nil, an error is signaled when the request
+     fails, either ‘plz-curl-error’ or ‘plz-http-error’ as appropriate,
+     with a ‘plz-error’ structure as the error data.  For synchronous
+     requests, this argument is ignored.
 
      ‘FINALLY’ is an optional function called without argument after
      ‘THEN’ or ‘ELSE’, as appropriate.  For synchronous requests, this
@@ -269,17 +270,17 @@ File: README.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 * Menu:
 
-* 0.4-pre: 04-pre. 
+* 0.4: 04. 
 * 0.3: 03. 
 * 0.2.1: 021. 
 * 0.2: 02. 
 * 0.1: 01. 
 
 
-File: README.info,  Node: 04-pre,  Next: 03,  Up: Changelog
+File: README.info,  Node: 04,  Next: 03,  Up: Changelog
 
-3.1 0.4-pre
-===========
+3.1 0.4
+=======
 
 *Additions*
    • Support for HTTP ‘HEAD’ requests.  (Thanks to Inc.  for
@@ -303,7 +304,7 @@ File: README.info,  Node: 04-pre,  Next: 03,  Up: Changelog
    • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-File: README.info,  Node: 03,  Next: 021,  Prev: 04-pre,  Up: Changelog
+File: README.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
 3.2 0.3
 =======
@@ -399,24 +400,24 @@ GPLv3
 
 Tag Table:
 Node: Top199
-Node: Installation1104
-Node: GNU ELPA1247
-Node: Manual1493
-Node: Usage1799
-Node: Examples2300
-Node: Functions3667
-Node: Queueing6562
-Node: Tips7820
-Node: Changelog8121
-Node: 04-pre8306
-Node: 039213
-Node: 0219665
-Node: 029814
-Node: 019943
-Node: Credits10037
-Node: Development10403
-Node: Copyright assignment10917
-Node: License11505
+Node: Installation1096
+Node: GNU ELPA1239
+Node: Manual1485
+Node: Usage1791
+Node: Examples2292
+Node: Functions3659
+Node: Queueing6653
+Node: Tips7911
+Node: Changelog8212
+Node: 048389
+Node: 039284
+Node: 0219732
+Node: 029881
+Node: 0110010
+Node: Credits10104
+Node: Development10470
+Node: Copyright assignment10984
+Node: License11572
 
 End Tag Table
 
