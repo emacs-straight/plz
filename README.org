@@ -173,6 +173,21 @@ You may also clear a queue with ~plz-clear~, which cancels any active or queued 
 :TOC:      :depth 0
 :END:
 
+** 0.5.3
+
+*Fixes*
++ Move new slot in ~plz-queue~ struct to end to prevent invalid byte-compiler expansions for already-compiled applications (which would require them to be recompiled after upgrading ~plz~).
+
+** 0.5.2
+
+*Fixes*
++ When clearing a queue, only call ~plz-queue~'s ~finally~ function when specified.
+
+** 0.5.1
+
+*Fixes*
++ Only call ~plz-queue~'s ~finally~ function when specified.  (Thanks to [[https://github.com/redchops][Dan Oriani]] for reporting.)
+
 ** 0.5
 
 *Additions*
