@@ -154,7 +154,9 @@ All of the queue-related functions return the queue as their value, making them 
 Or:
 
 #+begin_src elisp :exports code
-  (let ((queue (make-plz-queue :limit 2))
+  (let ((queue (make-plz-queue :limit 2
+                               :finally (lambda ()
+                                          (message "Queue empty."))))
         (urls '("https://httpbin.org/get?foo=0"
                 "https://httpbin.org/get?foo=1")))
     (plz-run
@@ -177,14 +179,14 @@ You may also clear a queue with ~plz-clear~, which cancels any active or queued 
 :TOC:      :depth 0
 :END:
 
-** 0.6-pre
+** 0.6
 
 *Additions*
 + Function ~plz~'s ~:body~ argument now accepts a list like ~(file FILENAME)~ to upload a file from disk (by passing the filename to curl, rather than reading its content into Emacs and sending it to curl through the pipe).
 
 *Fixes*
 + Function ~plz~'s docstring now mentions that the ~:body~ argument may also be a buffer (an intentional feature that was accidentally undocumented).
-+ Handle HTTP 301 redirects when using ~:as 'response~.
++ Handle HTTP 3xx redirects when using ~:as 'response~.
 
 ** 0.5.4
 
