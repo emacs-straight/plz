@@ -46,6 +46,7 @@ Usage
 
 Changelog
 
+* 0.7-pre: 07-pre.
 * 0.6: 06.
 * 0.5.4: 054.
 * 0.5.3: 053.
@@ -281,6 +282,7 @@ File: README.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 * Menu:
 
+* 0.7-pre: 07-pre.
 * 0.6: 06.
 * 0.5.4: 054.
 * 0.5.3: 053.
@@ -294,9 +296,45 @@ File: README.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 * 0.1: 01.
 
 
-File: README.info,  Node: 06,  Next: 054,  Up: Changelog
+File: README.info,  Node: 07-pre,  Next: 06,  Up: Changelog
 
-3.1 0.6
+3.1 0.7-pre
+===========
+
+*Changes*
+   • A new error signal, ‘plz-error’, is defined.  The existing signals,
+     ‘plz-curl-error’ and ‘plz-http-error’, inherit from it, so handling
+     ‘plz-error’ catches both.
+
+     *NOTE:* The existing signals, ‘plz-curl-error’ and
+     ‘plz-http-error’, are hereby deprecated, and they will be removed
+     in v0.8.  Applications should be updated while using v0.7 to only
+     expect ‘plz-error’.
+
+   *Fixes*
+   • Significant improvement in reliability by implementing failsafes
+     and workarounds for Emacs’s process-handling code.  (See #3
+     (https://github.com/alphapapa/plz.el/issues/3).)
+   • STDERR output from curl processes is not included in response
+     bodies (which sometimes happened, depending on Emacs’s internal
+     race conditions).  (Fixes #23
+     (https://github.com/alphapapa/plz.el/issues/23).)
+
+   *Internal*
+   • Response processing now happens outside the process sentinel, so
+     any errors (e.g.  in user callbacks) are not signaled from inside
+     the sentinel.  (This avoids the 2-second pause Emacs imposes in
+     such cases.)
+   • Tests run against a local instance of httpbin
+     (https://github.com/postmanlabs/httpbin) (since the ‘httpbin.org’
+     server is often overloaded).
+   • No buffer-local variables are defined anymore; process properties
+     are used instead.
+
+
+File: README.info,  Node: 06,  Next: 054,  Prev: 07-pre,  Up: Changelog
+
+3.2 0.6
 =======
 
 *Additions*
@@ -314,7 +352,7 @@ File: README.info,  Node: 06,  Next: 054,  Up: Changelog
 
 File: README.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
-3.2 0.5.4
+3.3 0.5.4
 =========
 
 *Fixes*
@@ -324,7 +362,7 @@ File: README.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
 File: README.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
-3.3 0.5.3
+3.4 0.5.3
 =========
 
 *Fixes*
@@ -335,7 +373,7 @@ File: README.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
 File: README.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
-3.4 0.5.2
+3.5 0.5.2
 =========
 
 *Fixes*
@@ -345,7 +383,7 @@ File: README.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
 File: README.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
-3.5 0.5.1
+3.6 0.5.1
 =========
 
 *Fixes*
@@ -355,7 +393,7 @@ File: README.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
 File: README.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
-3.6 0.5
+3.7 0.5
 =======
 
 *Additions*
@@ -365,7 +403,7 @@ File: README.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
 File: README.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
-3.7 0.4
+3.8 0.4
 =======
 
 *Additions*
@@ -392,7 +430,7 @@ File: README.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
 File: README.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
-3.8 0.3
+3.9 0.3
 =======
 
 *Additions*
@@ -408,8 +446,8 @@ File: README.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
 File: README.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
-3.9 0.2.1
-=========
+3.10 0.2.1
+==========
 
 *Fixes*
    • Handle when Curl process is interrupted.
@@ -417,7 +455,7 @@ File: README.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
 File: README.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
-3.10 0.2
+3.11 0.2
 ========
 
 *Added*
@@ -426,7 +464,7 @@ File: README.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
 File: README.info,  Node: 01,  Prev: 02,  Up: Changelog
 
-3.11 0.1
+3.12 0.1
 ========
 
 Initial release.
@@ -486,30 +524,31 @@ GPLv3
 
 Tag Table:
 Node: Top199
-Node: Installation1169
-Node: GNU ELPA1312
-Node: Manual1558
-Node: Usage1864
-Node: Examples2365
-Node: Functions3732
-Node: Queueing6840
-Node: Tips8223
-Node: Changelog8524
-Node: 068774
-Node: 0549374
-Node: 0539617
-Node: 0529933
-Node: 05110140
-Node: 0510392
-Node: 0410598
-Node: 0311504
-Node: 02111952
-Node: 0212101
-Node: 0112232
-Node: Credits12328
-Node: Development12694
-Node: Copyright assignment13208
-Node: License13796
+Node: Installation1188
+Node: GNU ELPA1331
+Node: Manual1577
+Node: Usage1883
+Node: Examples2384
+Node: Functions3751
+Node: Queueing6859
+Node: Tips8242
+Node: Changelog8543
+Node: 07-pre8812
+Node: 0610280
+Node: 05410895
+Node: 05311138
+Node: 05211454
+Node: 05111661
+Node: 0511913
+Node: 0412119
+Node: 0313025
+Node: 02113473
+Node: 0213624
+Node: 0113755
+Node: Credits13851
+Node: Development14217
+Node: Copyright assignment14731
+Node: License15319
 
 End Tag Table
 
