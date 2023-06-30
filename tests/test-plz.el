@@ -93,6 +93,7 @@
 (require 'ert)
 (require 'json)
 (require 'let-alist)
+(require 'map)
 
 (require 'plz)
 
@@ -152,14 +153,14 @@ Also, any instance of \"URI-PREFIX\" in URL-PART is replaced with
 
 (defmacro plz-test-get-response (response)
   "Test parts of RESPONSE with `should'."
-  `(and (should (plz-response-p ,response))
-        (should (numberp (plz-response-version ,response)))
-        (should (eq 200 (plz-response-status ,response)))
-        (should (equal "application/json" (alist-get 'content-type (plz-response-headers ,response))))
-        (let* ((json (json-read-from-string (plz-response-body ,response)))
-               (headers (alist-get 'headers json))
-               (user-agent (alist-get 'User-Agent headers nil nil #'equal)))
-          (should (string-match "curl" user-agent)))))
+  `(progn
+     (should (plz-response-p ,response))
+     (should (numberp (plz-response-version ,response)))
+     (should (eq 200 (plz-response-status ,response)))
+     (should (equal "application/json" (alist-get 'content-type (plz-response-headers ,response))))
+     (should (string-match "curl"
+                           (map-nested-elt (json-read-from-string (plz-response-body ,response))
+                                           '(headers User-Agent))))))
 
 ;;;; Tests
 
@@ -175,15 +176,19 @@ Also, any instance of \"URI-PREFIX\" in URL-PART is replaced with
     (should (string-match "curl" test-string))))
 
 (plz-deftest plz-get-buffer nil
-  ;; The sentinel kills the buffer, so we get the buffer as a string.
-  (let* ((test-buffer-string)
+  (let* ((result-buffer)
          (process (plz 'get (plz-test-url "/get")
-                    :as 'buffer
-                    :then (lambda (buffer)
-                            (with-current-buffer buffer
-                              (setf test-buffer-string (buffer-string)))))))
-    (plz-test-wait process)
-    (should (string-match "curl" test-buffer-string))))
+                    :as 'buffer :then (lambda (buffer)
+                                        (setf result-buffer buffer)))))
+    (unwind-protect
+        (progn
+          (plz-test-wait process)
+          (should (buffer-live-p result-buffer))
+          (with-current-buffer result-buffer
+            (should-not (looking-at-p plz-http-response-status-line-regexp))
+            (should (string-match "curl" (buffer-string)))))
+      (kill-buffer result-buffer)
+      (should-not (buffer-live-p result-buffer)))))
 
 (plz-deftest plz-get-response nil
   (let* ((test-response)
@@ -399,9 +404,9 @@ Also, any instance of \"URI-PREFIX\" in URL-PART is replaced with
                     :else (lambda (e)
                             (setf err e)))))
     (plz-test-wait process)
-    (should (and (plz-error-p err)
-                 (equal '(6 . "Couldn't resolve host. The given remote host was not resolved.")
-                        (plz-error-curl-error err))))))
+    (should (plz-error-p err))
+    (should (equal '(6 . "Couldn't resolve host. The given remote host was not resolved.")
+                   (plz-error-curl-error err)))))
 
 ;; FIXME: This test works interactively but not in batch mode: it
 ;; stalls the Emacs process indefinitely, using either sleep-for or
