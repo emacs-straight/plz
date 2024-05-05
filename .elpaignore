@@ -1,8 +1,0 @@
-.elpaignore
-Makefile
-makem.sh
-NOTES.org
-.github/
-images/
-tests/
-README.info
