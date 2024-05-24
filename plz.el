@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Maintainer: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/plz.el
-;; Version: 0.8
+;; Version: 0.9-pre
 ;; Package-Requires: ((emacs "26.3"))
 ;; Keywords: comm, network, http
 
@@ -457,6 +457,7 @@ into the process buffer.
                 (let ((filename (make-temp-file "plz-")))
                   (condition-case err
                       (progn
+                        ;; FIXME: Separate condition-case for writing the file.
                         (write-region (point-min) (point-max) filename)
                         (funcall then filename))
                     (file-already-exists
