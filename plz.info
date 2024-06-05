@@ -1,4 +1,4 @@
-This is docCAozPR.info, produced by makeinfo version 6.8 from plz.texi.
+This is docygshFJ.info, produced by makeinfo version 6.8 from plz.texi.
 
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
@@ -6,7 +6,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docCAozPR.info,  Node: Top,  Next: Installation,  Up: (dir)
+File: docygshFJ.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 plz.el
 ******
@@ -70,7 +70,7 @@ Development
 
 
 
-File: docCAozPR.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
+File: docygshFJ.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 
 1 Installation
 **************
@@ -81,7 +81,7 @@ File: docCAozPR.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 * Manual::
 
 
-File: docCAozPR.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
+File: docygshFJ.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 
 1.1 GNU ELPA
 ============
@@ -90,7 +90,7 @@ File: docCAozPR.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 It may be installed in Emacs using the ‘package-install’ command.
 
 
-File: docCAozPR.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
+File: docygshFJ.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
 
 1.2 Manual
 ==========
@@ -100,7 +100,7 @@ work on Emacs 26.3 or later.  To install it manually, simply place
 ‘plz.el’ in your ‘load-path’ and ‘(require 'plz)’.
 
 
-File: docCAozPR.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
+File: docygshFJ.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
 
 2 Usage
 *******
@@ -119,7 +119,7 @@ may be specified, as well as various other options.
 * Tips::
 
 
-File: docCAozPR.info,  Node: Examples,  Next: Functions,  Up: Usage
+File: docygshFJ.info,  Node: Examples,  Next: Functions,  Up: Usage
 
 2.1 Examples
 ============
@@ -165,7 +165,7 @@ from the data:
      (image :type jpeg :data ""ÿØÿà^@^PJFIF...")
 
 
-File: docCAozPR.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
+File: docygshFJ.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
 
 2.2 Functions
 =============
@@ -251,7 +251,7 @@ File: docCAozPR.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: U
      buffer.
 
 
-File: docCAozPR.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
+File: docygshFJ.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
 
 2.3 Queueing
 ============
@@ -289,7 +289,7 @@ or queued requests and calls their ‘:else’ functions.  And ‘plz-length’
 returns the number of a queue’s active and queued requests.
 
 
-File: docCAozPR.info,  Node: Tips,  Prev: Queueing,  Up: Usage
+File: docygshFJ.info,  Node: Tips,  Prev: Queueing,  Up: Usage
 
 2.4 Tips
 ========
@@ -299,7 +299,7 @@ File: docCAozPR.info,  Node: Tips,  Prev: Queueing,  Up: Usage
      binding global variables be necessary for normal operation.
 
 
-File: docCAozPR.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
+File: docygshFJ.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 3 Changelog
 ***********
@@ -325,7 +325,7 @@ File: docCAozPR.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 * 0.1: 01.
 
 
-File: docCAozPR.info,  Node: 09-pre,  Next: 08,  Up: Changelog
+File: docygshFJ.info,  Node: 09-pre,  Next: 08,  Up: Changelog
 
 3.1 0.9-pre
 ===========
@@ -347,6 +347,12 @@ File: docCAozPR.info,  Node: 09-pre,  Next: 08,  Up: Changelog
      larger or slower downloads might not finish within a certain
      duration, and it is surprising to the user to have this option set
      by default, potentially causing requests to timeout unnecessarily.)
+   • Using arguments ‘:as 'file’ or ‘:as '(file FILENAME)’ now passes
+     the filename to Curl, allowing it to write the data to the file
+     itself (rather than receiving the data into an Emacs buffer and
+     then writing it to a file.  This improves performance when
+     downloading large files, significantly reducing Emacs’s CPU and
+     memory usage).
 
    *Fixes*
 
@@ -369,7 +375,7 @@ File: docCAozPR.info,  Node: 09-pre,  Next: 08,  Up: Changelog
      ‘master’ branch (adding 29.2 and 29.3).
 
 
-File: docCAozPR.info,  Node: 08,  Next: 073,  Prev: 09-pre,  Up: Changelog
+File: docygshFJ.info,  Node: 08,  Next: 073,  Prev: 09-pre,  Up: Changelog
 
 3.2 0.8
 =======
@@ -383,7 +389,7 @@ File: docCAozPR.info,  Node: 08,  Next: 073,  Prev: 09-pre,  Up: Changelog
      Scherer (https://github.com/r0man).)
 
 
-File: docCAozPR.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
+File: docygshFJ.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
 
 3.3 0.7.3
 =========
@@ -393,7 +399,7 @@ File: docCAozPR.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
      longer committed to Git.)
 
 
-File: docCAozPR.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
+File: docygshFJ.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
 
 3.4 0.7.2
 =========
@@ -404,7 +410,7 @@ File: docCAozPR.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
      Turner (https://github.com/josephmturner).)
 
 
-File: docCAozPR.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
+File: docygshFJ.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
 
 3.5 0.7.1
 =========
@@ -414,7 +420,7 @@ File: docCAozPR.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
      (https://github.com/hubisan) for reporting.)
 
 
-File: docCAozPR.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
+File: docygshFJ.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
 
 3.6 0.7
 =======
@@ -457,7 +463,7 @@ File: docCAozPR.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
      are used instead.
 
 
-File: docCAozPR.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
+File: docygshFJ.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
 
 3.7 0.6
 =======
@@ -475,7 +481,7 @@ File: docCAozPR.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
    • Handle HTTP 3xx redirects when using ‘:as 'response’.
 
 
-File: docCAozPR.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
+File: docygshFJ.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
 3.8 0.5.4
 =========
@@ -485,7 +491,7 @@ File: docCAozPR.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
      features should not be designed and released on a Friday.)
 
 
-File: docCAozPR.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
+File: docygshFJ.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
 3.9 0.5.3
 =========
@@ -496,7 +502,7 @@ File: docCAozPR.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
      would require them to be recompiled after upgrading ‘plz’).
 
 
-File: docCAozPR.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
+File: docygshFJ.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
 3.10 0.5.2
 ==========
@@ -506,7 +512,7 @@ File: docCAozPR.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
      when specified.
 
 
-File: docCAozPR.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
+File: docygshFJ.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
 3.11 0.5.1
 ==========
@@ -516,7 +522,7 @@ File: docCAozPR.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
      to Dan Oriani (https://github.com/redchops) for reporting.)
 
 
-File: docCAozPR.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
+File: docygshFJ.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
 3.12 0.5
 ========
@@ -526,7 +532,7 @@ File: docCAozPR.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
      queue is finished.
 
 
-File: docCAozPR.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
+File: docygshFJ.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
 3.13 0.4
 ========
@@ -553,7 +559,7 @@ File: docCAozPR.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
    • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-File: docCAozPR.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
+File: docygshFJ.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
 3.14 0.3
 ========
@@ -569,7 +575,7 @@ File: docCAozPR.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
      linting succeeds).
 
 
-File: docCAozPR.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
+File: docygshFJ.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
 3.15 0.2.1
 ==========
@@ -578,7 +584,7 @@ File: docCAozPR.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
    • Handle when Curl process is interrupted.
 
 
-File: docCAozPR.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
+File: docygshFJ.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
 3.16 0.2
 ========
@@ -587,7 +593,7 @@ File: docCAozPR.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
    • Simple request queueing.
 
 
-File: docCAozPR.info,  Node: 01,  Prev: 02,  Up: Changelog
+File: docygshFJ.info,  Node: 01,  Prev: 02,  Up: Changelog
 
 3.17 0.1
 ========
@@ -595,7 +601,7 @@ File: docCAozPR.info,  Node: 01,  Prev: 02,  Up: Changelog
 Initial release.
 
 
-File: docCAozPR.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
+File: docygshFJ.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
 
 4 Credits
 *********
@@ -606,7 +612,7 @@ File: docCAozPR.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up:
      invaluable advice, review, and encouragement.
 
 
-File: docCAozPR.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
+File: docygshFJ.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
 
 5 Development
 *************
@@ -624,7 +630,7 @@ passing tests.
 * Copyright assignment::
 
 
-File: docCAozPR.info,  Node: Copyright assignment,  Up: Development
+File: docygshFJ.info,  Node: Copyright assignment,  Up: Development
 
 5.1 Copyright assignment
 ========================
@@ -638,7 +644,7 @@ who wish to do so may contact emacs-devel@gnu.org <emacs-devel@gnu.org>
 to request the assignment form.
 
 
-File: docCAozPR.info,  Node: License,  Prev: Development,  Up: Top
+File: docygshFJ.info,  Node: License,  Prev: Development,  Up: Top
 
 6 License
 *********
@@ -659,26 +665,26 @@ Node: Queueing8053
 Node: Tips9439
 Node: Changelog9743
 Node: 09-pre10079
-Node: 0811988
-Node: 07312428
-Node: 07212637
-Node: 07112936
-Node: 0713152
-Node: 0615043
-Node: 05415657
-Node: 05315903
-Node: 05216222
-Node: 05116434
-Node: 0516691
-Node: 0416902
-Node: 0317876
-Node: 02118329
-Node: 0218483
-Node: 0118617
-Node: Credits18716
-Node: Development19085
-Node: Copyright assignment19602
-Node: License20193
+Node: 0812361
+Node: 07312801
+Node: 07213010
+Node: 07113309
+Node: 0713525
+Node: 0615416
+Node: 05416030
+Node: 05316276
+Node: 05216595
+Node: 05116807
+Node: 0517064
+Node: 0417275
+Node: 0318249
+Node: 02118702
+Node: 0218856
+Node: 0118990
+Node: Credits19089
+Node: Development19458
+Node: Copyright assignment19975
+Node: License20566
 
 End Tag Table
 
