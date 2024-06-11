@@ -248,8 +248,8 @@ be simple and well-organized.  Every feature is tested against
 3 Changelog
 ═══════════
 
-3.1 0.9-pre
-───────────
+3.1 0.9
+───────
 
   *Compatibility*
 
@@ -284,6 +284,9 @@ be simple and well-organized.  Every feature is tested against
   ⁃ Inhibit buffer hooks when calling `generate-new-buffer' (as extra
     protection against "kill buffer?" prompts in case of errors).  (See
     [#52].  Thanks to [Michał Krzywkowski].)
+    • Avoid "kill buffer?" prompts in case of errors on Emacs versions
+      before 28.  (See [#52] and [#57].  Thanks to [Michał
+      Krzywkowski].)
 
   *Development*
 
@@ -301,6 +304,8 @@ be simple and well-organized.  Every feature is tested against
 [#52] <https://github.com/alphapapa/plz.el/pull/52>
 
 [Michał Krzywkowski] <https://github.com/mkcms>
+
+[#57] <https://github.com/alphapapa/plz.el/issues/57>
 
 
 3.2 0.8
