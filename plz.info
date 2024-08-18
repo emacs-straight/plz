@@ -1,4 +1,4 @@
-This is docGlk3J0.info, produced by makeinfo version 6.8 from plz.texi.
+This is docd1Jcr3.info, produced by makeinfo version 6.8 from plz.texi.
 
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
@@ -6,7 +6,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docGlk3J0.info,  Node: Top,  Next: Installation,  Up: (dir)
+File: docd1Jcr3.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 plz.el
 ******
@@ -46,6 +46,8 @@ Usage
 
 Changelog
 
+* 0.10-pre: 010-pre.
+* 0.9.1: 091.
 * 0.9: 09.
 * 0.8: 08.
 * 0.7.3: 073.
@@ -70,7 +72,7 @@ Development
 
 
 
-File: docGlk3J0.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
+File: docd1Jcr3.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 
 1 Installation
 **************
@@ -81,7 +83,7 @@ File: docGlk3J0.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 * Manual::
 
 
-File: docGlk3J0.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
+File: docd1Jcr3.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 
 1.1 GNU ELPA
 ============
@@ -90,7 +92,7 @@ File: docGlk3J0.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 It may be installed in Emacs using the ‘package-install’ command.
 
 
-File: docGlk3J0.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
+File: docd1Jcr3.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
 
 1.2 Manual
 ==========
@@ -100,7 +102,7 @@ work on Emacs 26.3 or later.  To install it manually, simply place
 ‘plz.el’ in your ‘load-path’ and ‘(require 'plz)’.
 
 
-File: docGlk3J0.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
+File: docd1Jcr3.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
 
 2 Usage
 *******
@@ -119,7 +121,7 @@ may be specified, as well as various other options.
 * Tips::
 
 
-File: docGlk3J0.info,  Node: Examples,  Next: Functions,  Up: Usage
+File: docd1Jcr3.info,  Node: Examples,  Next: Functions,  Up: Usage
 
 2.1 Examples
 ============
@@ -165,7 +167,7 @@ from the data:
      (image :type jpeg :data ""ÿØÿà^@^PJFIF...")
 
 
-File: docGlk3J0.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
+File: docd1Jcr3.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
 
 2.2 Functions
 =============
@@ -201,7 +203,8 @@ File: docGlk3J0.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: U
         • ‘(file ~FILENAME)’ to pass ‘FILENAME’ after having saved the
           response body to it without decoding.  ‘FILENAME’ must be a
           non-existent file; if it exists, it will not be overwritten,
-          and an error will be signaled.
+          and an error will be signaled.  ‘FILENAME’ is passed through
+          ‘expand-file-name’, which see.
         • A function, which is called in the response buffer with it
           narrowed to the response body (suitable for, e.g.
           ‘json-read’).
@@ -251,7 +254,7 @@ File: docGlk3J0.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: U
      buffer.
 
 
-File: docGlk3J0.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
+File: docd1Jcr3.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
 
 2.3 Queueing
 ============
@@ -289,7 +292,7 @@ or queued requests and calls their ‘:else’ functions.  And ‘plz-length’
 returns the number of a queue’s active and queued requests.
 
 
-File: docGlk3J0.info,  Node: Tips,  Prev: Queueing,  Up: Usage
+File: docd1Jcr3.info,  Node: Tips,  Prev: Queueing,  Up: Usage
 
 2.4 Tips
 ========
@@ -299,13 +302,15 @@ File: docGlk3J0.info,  Node: Tips,  Prev: Queueing,  Up: Usage
      binding global variables be necessary for normal operation.
 
 
-File: docGlk3J0.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
+File: docd1Jcr3.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 3 Changelog
 ***********
 
 * Menu:
 
+* 0.10-pre: 010-pre.
+* 0.9.1: 091.
 * 0.9: 09.
 * 0.8: 08.
 * 0.7.3: 073.
@@ -325,9 +330,29 @@ File: docGlk3J0.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 * 0.1: 01.
 
 
-File: docGlk3J0.info,  Node: 09,  Next: 08,  Up: Changelog
+File: docd1Jcr3.info,  Node: 010-pre,  Next: 091,  Up: Changelog
 
-3.1 0.9
+3.1 0.10-pre
+============
+
+Nothing new yet.
+
+
+File: docd1Jcr3.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
+
+3.2 0.9.1
+=========
+
+*Fixes*
+
+   • Expand filenames when downloading to files (which was already
+     applied to filenames passed for uploading).  (Thanks to Joseph
+     Turner (https://github.com/josephmturner).)
+
+
+File: docd1Jcr3.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
+
+3.3 0.9
 =======
 
 *Compatibility*
@@ -337,6 +362,14 @@ File: docGlk3J0.info,  Node: 09,  Next: 08,  Up: Changelog
      Emacs 26.3, an earlier version of ‘plz’ may be used, or this
      version might be compatible, with or without minor changes, which
      the maintainer cannot offer support for.)
+
+   *Additions*
+
+   • When downloading to a file, the ‘--create-dirs’ option is passed to
+     Curl so it will create any necessary subdirectories automatically.
+     (#64 (https://github.com/alphapapa/plz.el/pull/64).  Thanks to
+     Joseph Turner (https://github.com/josephmturner) and USHIN
+     (https://ushin.org/).)
 
    *Changes*
 
@@ -380,9 +413,9 @@ File: docGlk3J0.info,  Node: 09,  Next: 08,  Up: Changelog
      ‘master’ branch (adding 29.2 and 29.3).
 
 
-File: docGlk3J0.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
+File: docd1Jcr3.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
 
-3.2 0.8
+3.4 0.8
 =======
 
 *Additions*
@@ -394,9 +427,9 @@ File: docGlk3J0.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
      Scherer (https://github.com/r0man).)
 
 
-File: docGlk3J0.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
+File: docd1Jcr3.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
 
-3.3 0.7.3
+3.5 0.7.3
 =========
 
 *Fixes*
@@ -404,9 +437,9 @@ File: docGlk3J0.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
      longer committed to Git.)
 
 
-File: docGlk3J0.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
+File: docd1Jcr3.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
 
-3.4 0.7.2
+3.6 0.7.2
 =========
 
 *Fixes*
@@ -415,9 +448,9 @@ File: docGlk3J0.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
      Turner (https://github.com/josephmturner).)
 
 
-File: docGlk3J0.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
+File: docd1Jcr3.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
 
-3.5 0.7.1
+3.7 0.7.1
 =========
 
 *Fixes*
@@ -425,9 +458,9 @@ File: docGlk3J0.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
      (https://github.com/hubisan) for reporting.)
 
 
-File: docGlk3J0.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
+File: docd1Jcr3.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
 
-3.6 0.7
+3.8 0.7
 =======
 
 *Changes*
@@ -468,9 +501,9 @@ File: docGlk3J0.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
      are used instead.
 
 
-File: docGlk3J0.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
+File: docd1Jcr3.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
 
-3.7 0.6
+3.9 0.6
 =======
 
 *Additions*
@@ -486,20 +519,20 @@ File: docGlk3J0.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
    • Handle HTTP 3xx redirects when using ‘:as 'response’.
 
 
-File: docGlk3J0.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
+File: docd1Jcr3.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
-3.8 0.5.4
-=========
+3.10 0.5.4
+==========
 
 *Fixes*
    • Only run queue’s ‘finally’ function after queue is empty.  (New
      features should not be designed and released on a Friday.)
 
 
-File: docGlk3J0.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
+File: docd1Jcr3.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
-3.9 0.5.3
-=========
+3.11 0.5.3
+==========
 
 *Fixes*
    • Move new slot in ‘plz-queue’ struct to end to prevent invalid
@@ -507,9 +540,9 @@ File: docGlk3J0.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
      would require them to be recompiled after upgrading ‘plz’).
 
 
-File: docGlk3J0.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
+File: docd1Jcr3.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
-3.10 0.5.2
+3.12 0.5.2
 ==========
 
 *Fixes*
@@ -517,9 +550,9 @@ File: docGlk3J0.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
      when specified.
 
 
-File: docGlk3J0.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
+File: docd1Jcr3.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
-3.11 0.5.1
+3.13 0.5.1
 ==========
 
 *Fixes*
@@ -527,9 +560,9 @@ File: docGlk3J0.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
      to Dan Oriani (https://github.com/redchops) for reporting.)
 
 
-File: docGlk3J0.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
+File: docd1Jcr3.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
-3.12 0.5
+3.14 0.5
 ========
 
 *Additions*
@@ -537,9 +570,9 @@ File: docGlk3J0.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
      queue is finished.
 
 
-File: docGlk3J0.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
+File: docd1Jcr3.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
-3.13 0.4
+3.15 0.4
 ========
 
 *Additions*
@@ -564,9 +597,9 @@ File: docGlk3J0.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
    • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-File: docGlk3J0.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
+File: docd1Jcr3.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
-3.14 0.3
+3.16 0.3
 ========
 
 *Additions*
@@ -580,33 +613,33 @@ File: docGlk3J0.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
      linting succeeds).
 
 
-File: docGlk3J0.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
+File: docd1Jcr3.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
-3.15 0.2.1
+3.17 0.2.1
 ==========
 
 *Fixes*
    • Handle when Curl process is interrupted.
 
 
-File: docGlk3J0.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
+File: docd1Jcr3.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
-3.16 0.2
+3.18 0.2
 ========
 
 *Added*
    • Simple request queueing.
 
 
-File: docGlk3J0.info,  Node: 01,  Prev: 02,  Up: Changelog
+File: docd1Jcr3.info,  Node: 01,  Prev: 02,  Up: Changelog
 
-3.17 0.1
+3.19 0.1
 ========
 
 Initial release.
 
 
-File: docGlk3J0.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
+File: docd1Jcr3.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
 
 4 Credits
 *********
@@ -617,7 +650,7 @@ File: docGlk3J0.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up:
      invaluable advice, review, and encouragement.
 
 
-File: docGlk3J0.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
+File: docd1Jcr3.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
 
 5 Development
 *************
@@ -635,7 +668,7 @@ passing tests.
 * Copyright assignment::
 
 
-File: docGlk3J0.info,  Node: Copyright assignment,  Up: Development
+File: docd1Jcr3.info,  Node: Copyright assignment,  Up: Development
 
 5.1 Copyright assignment
 ========================
@@ -649,7 +682,7 @@ who wish to do so may contact emacs-devel@gnu.org <emacs-devel@gnu.org>
 to request the assignment form.
 
 
-File: docGlk3J0.info,  Node: License,  Prev: Development,  Up: Top
+File: docd1Jcr3.info,  Node: License,  Prev: Development,  Up: Top
 
 6 License
 *********
@@ -660,36 +693,38 @@ GPLv3
 
 Tag Table:
 Node: Top199
-Node: Installation1247
-Node: GNU ELPA1393
-Node: Manual1642
-Node: Usage1951
-Node: Examples2455
-Node: Functions3825
-Node: Queueing8045
-Node: Tips9431
-Node: Changelog9735
-Node: 0910063
-Node: 0812635
-Node: 07313071
-Node: 07213280
-Node: 07113579
-Node: 0713795
-Node: 0615686
-Node: 05416300
-Node: 05316546
-Node: 05216865
-Node: 05117077
-Node: 0517334
-Node: 0417545
-Node: 0318519
-Node: 02118972
-Node: 0219126
-Node: 0119260
-Node: Credits19359
-Node: Development19728
-Node: Copyright assignment20245
-Node: License20836
+Node: Installation1282
+Node: GNU ELPA1428
+Node: Manual1677
+Node: Usage1986
+Node: Examples2490
+Node: Functions3860
+Node: Queueing8159
+Node: Tips9545
+Node: Changelog9849
+Node: 010-pre10212
+Node: 09110325
+Node: 0910621
+Node: 0813533
+Node: 07313969
+Node: 07214178
+Node: 07114477
+Node: 0714693
+Node: 0616584
+Node: 05417198
+Node: 05317446
+Node: 05217767
+Node: 05117979
+Node: 0518236
+Node: 0418447
+Node: 0319421
+Node: 02119874
+Node: 0220028
+Node: 0120162
+Node: Credits20261
+Node: Development20630
+Node: Copyright assignment21147
+Node: License21738
 
 End Tag Table
 

@@ -125,7 +125,7 @@ Synchronously download a JPEG file, then create an Emacs image object from the d
    - ~string~ to pass the response body as a decoded string.
    - ~response~ to pass a ~plz-response~ structure.
    - ~file~ to pass a temporary filename to which the response body has been saved without decoding.
-   - ~(file ~FILENAME)~ to pass ~FILENAME~ after having saved the response body to it without decoding.  ~FILENAME~ must be a non-existent file; if it exists, it will not be overwritten, and an error will be signaled.
+   - ~(file ~FILENAME)~ to pass ~FILENAME~ after having saved the response body to it without decoding.  ~FILENAME~ must be a non-existent file; if it exists, it will not be overwritten, and an error will be signaled.  ~FILENAME~ is passed through ~expand-file-name~, which see.
    - A function, which is called in the response buffer with it narrowed to the response body (suitable for, e.g. ~json-read~).
 
    If ~DECODE~ is non-nil, the response body is decoded automatically.  For binary content, it should be nil.  When ~AS~ is ~binary~, ~DECODE~ is automatically set to nil.
@@ -188,11 +188,25 @@ You may also clear a queue with ~plz-clear~, which cancels any active or queued 
 :TOC:      :depth 0
 :END:
 
+** 0.10-pre
+
+Nothing new yet.
+
+** 0.9.1
+
+*Fixes*
+
++ Expand filenames when downloading to files (which was already applied to filenames passed for uploading).  (Thanks to [[https://github.com/josephmturner][Joseph Turner]].)  
+
 ** 0.9
 
 *Compatibility*
 
 + The minimum supported Emacs version is now 27.1.  (It is no longer practical to test ~plz~ with Emacs versions older than 27.1.  For Emacs 26.3, an earlier version of ~plz~ may be used, or this version might be compatible, with or without minor changes, which the maintainer cannot offer support for.)
+
+*Additions*
+
++ When downloading to a file, the ~--create-dirs~ option is passed to Curl so it will create any necessary subdirectories automatically.  ([[https://github.com/alphapapa/plz.el/pull/64][#64]].  Thanks to [[https://github.com/josephmturner][Joseph Turner]] and [[https://ushin.org/][USHIN]].)
 
 *Changes*
 
