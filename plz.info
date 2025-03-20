@@ -1,4 +1,4 @@
-This is docd1Jcr3.info, produced by makeinfo version 6.8 from plz.texi.
+This is docvENl8O.info, produced by makeinfo version 6.8 from plz.texi.
 
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
@@ -6,7 +6,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docd1Jcr3.info,  Node: Top,  Next: Installation,  Up: (dir)
+File: docvENl8O.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 plz.el
 ******
@@ -72,7 +72,7 @@ Development
 
 
 
-File: docd1Jcr3.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
+File: docvENl8O.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 
 1 Installation
 **************
@@ -83,7 +83,7 @@ File: docd1Jcr3.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 * Manual::
 
 
-File: docd1Jcr3.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
+File: docvENl8O.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 
 1.1 GNU ELPA
 ============
@@ -92,7 +92,7 @@ File: docd1Jcr3.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 It may be installed in Emacs using the ‘package-install’ command.
 
 
-File: docd1Jcr3.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
+File: docvENl8O.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
 
 1.2 Manual
 ==========
@@ -102,7 +102,7 @@ work on Emacs 26.3 or later.  To install it manually, simply place
 ‘plz.el’ in your ‘load-path’ and ‘(require 'plz)’.
 
 
-File: docd1Jcr3.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
+File: docvENl8O.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
 
 2 Usage
 *******
@@ -121,7 +121,7 @@ may be specified, as well as various other options.
 * Tips::
 
 
-File: docd1Jcr3.info,  Node: Examples,  Next: Functions,  Up: Usage
+File: docvENl8O.info,  Node: Examples,  Next: Functions,  Up: Usage
 
 2.1 Examples
 ============
@@ -167,7 +167,7 @@ from the data:
      (image :type jpeg :data ""ÿØÿà^@^PJFIF...")
 
 
-File: docd1Jcr3.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
+File: docvENl8O.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
 
 2.2 Functions
 =============
@@ -254,7 +254,7 @@ File: docd1Jcr3.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: U
      buffer.
 
 
-File: docd1Jcr3.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
+File: docvENl8O.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
 
 2.3 Queueing
 ============
@@ -292,7 +292,7 @@ or queued requests and calls their ‘:else’ functions.  And ‘plz-length’
 returns the number of a queue’s active and queued requests.
 
 
-File: docd1Jcr3.info,  Node: Tips,  Prev: Queueing,  Up: Usage
+File: docvENl8O.info,  Node: Tips,  Prev: Queueing,  Up: Usage
 
 2.4 Tips
 ========
@@ -302,7 +302,7 @@ File: docd1Jcr3.info,  Node: Tips,  Prev: Queueing,  Up: Usage
      binding global variables be necessary for normal operation.
 
 
-File: docd1Jcr3.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
+File: docvENl8O.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 3 Changelog
 ***********
@@ -330,15 +330,19 @@ File: docd1Jcr3.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 * 0.1: 01.
 
 
-File: docd1Jcr3.info,  Node: 010-pre,  Next: 091,  Up: Changelog
+File: docvENl8O.info,  Node: 010-pre,  Next: 091,  Up: Changelog
 
 3.1 0.10-pre
 ============
 
-Nothing new yet.
+*Additions*
+
+   • Support for the HTTP PATCH method.  (#49
+     (https://github.com/alphapapa/plz.el/pull/49).  Thanks to Pedro
+     Morais (https://github.com/fpvmorais).)
 
 
-File: docd1Jcr3.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
+File: docvENl8O.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
 
 3.2 0.9.1
 =========
@@ -350,7 +354,7 @@ File: docd1Jcr3.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
      Turner (https://github.com/josephmturner).)
 
 
-File: docd1Jcr3.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
+File: docvENl8O.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
 
 3.3 0.9
 =======
@@ -413,7 +417,7 @@ File: docd1Jcr3.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
      ‘master’ branch (adding 29.2 and 29.3).
 
 
-File: docd1Jcr3.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
+File: docvENl8O.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
 
 3.4 0.8
 =======
@@ -427,7 +431,7 @@ File: docd1Jcr3.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
      Scherer (https://github.com/r0man).)
 
 
-File: docd1Jcr3.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
+File: docvENl8O.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
 
 3.5 0.7.3
 =========
@@ -437,7 +441,7 @@ File: docd1Jcr3.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
      longer committed to Git.)
 
 
-File: docd1Jcr3.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
+File: docvENl8O.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
 
 3.6 0.7.2
 =========
@@ -448,7 +452,7 @@ File: docd1Jcr3.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
      Turner (https://github.com/josephmturner).)
 
 
-File: docd1Jcr3.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
+File: docvENl8O.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
 
 3.7 0.7.1
 =========
@@ -458,7 +462,7 @@ File: docd1Jcr3.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
      (https://github.com/hubisan) for reporting.)
 
 
-File: docd1Jcr3.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
+File: docvENl8O.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
 
 3.8 0.7
 =======
@@ -501,7 +505,7 @@ File: docd1Jcr3.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
      are used instead.
 
 
-File: docd1Jcr3.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
+File: docvENl8O.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
 
 3.9 0.6
 =======
@@ -519,7 +523,7 @@ File: docd1Jcr3.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
    • Handle HTTP 3xx redirects when using ‘:as 'response’.
 
 
-File: docd1Jcr3.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
+File: docvENl8O.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
 3.10 0.5.4
 ==========
@@ -529,7 +533,7 @@ File: docd1Jcr3.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
      features should not be designed and released on a Friday.)
 
 
-File: docd1Jcr3.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
+File: docvENl8O.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
 3.11 0.5.3
 ==========
@@ -540,7 +544,7 @@ File: docd1Jcr3.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
      would require them to be recompiled after upgrading ‘plz’).
 
 
-File: docd1Jcr3.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
+File: docvENl8O.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
 3.12 0.5.2
 ==========
@@ -550,7 +554,7 @@ File: docd1Jcr3.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
      when specified.
 
 
-File: docd1Jcr3.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
+File: docvENl8O.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
 3.13 0.5.1
 ==========
@@ -560,7 +564,7 @@ File: docd1Jcr3.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
      to Dan Oriani (https://github.com/redchops) for reporting.)
 
 
-File: docd1Jcr3.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
+File: docvENl8O.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
 3.14 0.5
 ========
@@ -570,7 +574,7 @@ File: docd1Jcr3.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
      queue is finished.
 
 
-File: docd1Jcr3.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
+File: docvENl8O.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
 3.15 0.4
 ========
@@ -597,7 +601,7 @@ File: docd1Jcr3.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
    • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-File: docd1Jcr3.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
+File: docvENl8O.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
 3.16 0.3
 ========
@@ -613,7 +617,7 @@ File: docd1Jcr3.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
      linting succeeds).
 
 
-File: docd1Jcr3.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
+File: docvENl8O.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
 3.17 0.2.1
 ==========
@@ -622,7 +626,7 @@ File: docd1Jcr3.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
    • Handle when Curl process is interrupted.
 
 
-File: docd1Jcr3.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
+File: docvENl8O.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
 3.18 0.2
 ========
@@ -631,7 +635,7 @@ File: docd1Jcr3.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
    • Simple request queueing.
 
 
-File: docd1Jcr3.info,  Node: 01,  Prev: 02,  Up: Changelog
+File: docvENl8O.info,  Node: 01,  Prev: 02,  Up: Changelog
 
 3.19 0.1
 ========
@@ -639,7 +643,7 @@ File: docd1Jcr3.info,  Node: 01,  Prev: 02,  Up: Changelog
 Initial release.
 
 
-File: docd1Jcr3.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
+File: docvENl8O.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
 
 4 Credits
 *********
@@ -650,7 +654,7 @@ File: docd1Jcr3.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up:
      invaluable advice, review, and encouragement.
 
 
-File: docd1Jcr3.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
+File: docvENl8O.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
 
 5 Development
 *************
@@ -668,7 +672,7 @@ passing tests.
 * Copyright assignment::
 
 
-File: docd1Jcr3.info,  Node: Copyright assignment,  Up: Development
+File: docvENl8O.info,  Node: Copyright assignment,  Up: Development
 
 5.1 Copyright assignment
 ========================
@@ -682,7 +686,7 @@ who wish to do so may contact emacs-devel@gnu.org <emacs-devel@gnu.org>
 to request the assignment form.
 
 
-File: docd1Jcr3.info,  Node: License,  Prev: Development,  Up: Top
+File: docvENl8O.info,  Node: License,  Prev: Development,  Up: Top
 
 6 License
 *********
@@ -703,28 +707,28 @@ Node: Queueing8159
 Node: Tips9545
 Node: Changelog9849
 Node: 010-pre10212
-Node: 09110325
-Node: 0910621
-Node: 0813533
-Node: 07313969
-Node: 07214178
-Node: 07114477
-Node: 0714693
-Node: 0616584
-Node: 05417198
-Node: 05317446
-Node: 05217767
-Node: 05117979
-Node: 0518236
-Node: 0418447
-Node: 0319421
-Node: 02119874
-Node: 0220028
-Node: 0120162
-Node: Credits20261
-Node: Development20630
-Node: Copyright assignment21147
-Node: License21738
+Node: 09110483
+Node: 0910779
+Node: 0813691
+Node: 07314127
+Node: 07214336
+Node: 07114635
+Node: 0714851
+Node: 0616742
+Node: 05417356
+Node: 05317604
+Node: 05217925
+Node: 05118137
+Node: 0518394
+Node: 0418605
+Node: 0319579
+Node: 02120032
+Node: 0220186
+Node: 0120320
+Node: Credits20419
+Node: Development20788
+Node: Copyright assignment21305
+Node: License21896
 
 End Tag Table
 

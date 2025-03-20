@@ -252,7 +252,15 @@ be simple and well-organized.  Every feature is tested against
 3.1 0.10-pre
 ────────────
 
-  Nothing new yet.
+  *Additions*
+
+  ⁃ Support for the HTTP PATCH method.  ([#49].  Thanks to [Pedro
+    Morais].)
+
+
+[#49] <https://github.com/alphapapa/plz.el/pull/49>
+
+[Pedro Morais] <https://github.com/fpvmorais>
 
 
 3.2 0.9.1
