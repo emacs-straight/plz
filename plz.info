@@ -1,4 +1,4 @@
-This is docvENl8O.info, produced by makeinfo version 6.8 from plz.texi.
+This is plz.info, produced by makeinfo version 7.1.1 from plz.texi.
 
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
@@ -6,7 +6,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docvENl8O.info,  Node: Top,  Next: Installation,  Up: (dir)
+File: plz.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 plz.el
 ******
@@ -15,7 +15,7 @@ file:http://elpa.gnu.org/packages/plz.svg
 (http://elpa.gnu.org/packages/plz.html)
 
    ‘plz’ is an HTTP library for Emacs.  It uses ‘curl’ as a backend,
-which avoids some of the issues with using Emacs’s built-in ‘url’
+which avoids some of the issues with using Emacs's built-in ‘url’
 library.  It supports both synchronous and asynchronous requests.  Its
 API is intended to be simple, natural, and expressive.  Its code is
 intended to be simple and well-organized.  Every feature is tested
@@ -30,7 +30,7 @@ against httpbin (https://httpbin.org/).
 * Development::
 * License::
 
-— The Detailed Node Listing —
+-- The Detailed Node Listing --
 
 Installation
 
@@ -72,7 +72,7 @@ Development
 
 
 
-File: docvENl8O.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
+File: plz.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 
 1 Installation
 **************
@@ -83,7 +83,7 @@ File: docvENl8O.info,  Node: Installation,  Next: Usage,  Prev: Top,  Up: Top
 * Manual::
 
 
-File: docvENl8O.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
+File: plz.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 
 1.1 GNU ELPA
 ============
@@ -92,17 +92,17 @@ File: docvENl8O.info,  Node: GNU ELPA,  Next: Manual,  Up: Installation
 It may be installed in Emacs using the ‘package-install’ command.
 
 
-File: docvENl8O.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
+File: plz.info,  Node: Manual,  Prev: GNU ELPA,  Up: Installation
 
 1.2 Manual
 ==========
 
-‘plz’ has no dependencies other than Emacs and ‘curl’.  It’s known to
+‘plz’ has no dependencies other than Emacs and ‘curl’.  It's known to
 work on Emacs 26.3 or later.  To install it manually, simply place
 ‘plz.el’ in your ‘load-path’ and ‘(require 'plz)’.
 
 
-File: docvENl8O.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
+File: plz.info,  Node: Usage,  Next: Changelog,  Prev: Installation,  Up: Top
 
 2 Usage
 *******
@@ -121,7 +121,7 @@ may be specified, as well as various other options.
 * Tips::
 
 
-File: docvENl8O.info,  Node: Examples,  Next: Functions,  Up: Usage
+File: plz.info,  Node: Examples,  Next: Functions,  Up: Usage
 
 2.1 Examples
 ============
@@ -167,14 +167,14 @@ from the data:
      (image :type jpeg :data ""ÿØÿà^@^PJFIF...")
 
 
-File: docvENl8O.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
+File: plz.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: Usage
 
 2.2 Functions
 =============
 
 ‘plz’
-     _(method url &key headers body else finally noquery (as ’string)
-     (then ’sync) (body-type ’text) (decode t decode-s) (connect-timeout
+     _(method url &key headers body else finally noquery (as 'string)
+     (then 'sync) (body-type 'text) (decode t decode-s) (connect-timeout
      plz-connect-timeout) (timeout plz-timeout))_
 
      Request ‘METHOD’ from ‘URL’ with curl.  Return the curl process
@@ -254,7 +254,7 @@ File: docvENl8O.info,  Node: Functions,  Next: Queueing,  Prev: Examples,  Up: U
      buffer.
 
 
-File: docvENl8O.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
+File: plz.info,  Node: Queueing,  Next: Tips,  Prev: Functions,  Up: Usage
 
 2.3 Queueing
 ============
@@ -289,20 +289,20 @@ making them easy to use.  For example:
 
    You may also clear a queue with ‘plz-clear’, which cancels any active
 or queued requests and calls their ‘:else’ functions.  And ‘plz-length’
-returns the number of a queue’s active and queued requests.
+returns the number of a queue's active and queued requests.
 
 
-File: docvENl8O.info,  Node: Tips,  Prev: Queueing,  Up: Usage
+File: plz.info,  Node: Tips,  Prev: Queueing,  Up: Usage
 
 2.4 Tips
 ========
 
    • You can customize settings in the ‘plz’ group, but this can only be
-     used to adjust a few defaults.  It’s not intended that changing or
+     used to adjust a few defaults.  It's not intended that changing or
      binding global variables be necessary for normal operation.
 
 
-File: docvENl8O.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
+File: plz.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 
 3 Changelog
 ***********
@@ -330,7 +330,7 @@ File: docvENl8O.info,  Node: Changelog,  Next: Credits,  Prev: Usage,  Up: Top
 * 0.1: 01.
 
 
-File: docvENl8O.info,  Node: 010-pre,  Next: 091,  Up: Changelog
+File: plz.info,  Node: 010-pre,  Next: 091,  Up: Changelog
 
 3.1 0.10-pre
 ============
@@ -342,7 +342,7 @@ File: docvENl8O.info,  Node: 010-pre,  Next: 091,  Up: Changelog
      Morais (https://github.com/fpvmorais).)
 
 
-File: docvENl8O.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
+File: plz.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
 
 3.2 0.9.1
 =========
@@ -354,7 +354,7 @@ File: docvENl8O.info,  Node: 091,  Next: 09,  Prev: 010-pre,  Up: Changelog
      Turner (https://github.com/josephmturner).)
 
 
-File: docvENl8O.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
+File: plz.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
 
 3.3 0.9
 =======
@@ -378,7 +378,7 @@ File: docvENl8O.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
    *Changes*
 
    • Option ‘plz-timeout’ is removed.  (It was the default value for
-     ‘plz’’s ‘:timeout’ argument, which is passed to Curl as its
+     ‘plz’'s ‘:timeout’ argument, which is passed to Curl as its
      ‘--max-time’ argument, limiting the total duration of a request
      operation.  This argument should be unset by default, because
      larger or slower downloads might not finish within a certain
@@ -388,13 +388,13 @@ File: docvENl8O.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
      the filename to Curl, allowing it to write the data to the file
      itself (rather than receiving the data into an Emacs buffer and
      then writing it to a file.  This improves performance when
-     downloading large files, significantly reducing Emacs’s CPU and
+     downloading large files, significantly reducing Emacs's CPU and
      memory usage).
 
    *Fixes*
 
-   • Improve workaround for Emacs’s process sentinel-related issues.
-     (Don’t try to process response a second time if Emacs calls the
+   • Improve workaround for Emacs's process sentinel-related issues.
+     (Don't try to process response a second time if Emacs calls the
      sentinel after ‘plz’ has returned for a synchronous request.  See
      #53 (https://github.com/alphapapa/plz.el/issues/53).  Thanks to
      Joseph Turner (https://github.com/josephmturner) for extensive help
@@ -417,7 +417,7 @@ File: docvENl8O.info,  Node: 09,  Next: 08,  Prev: 091,  Up: Changelog
      ‘master’ branch (adding 29.2 and 29.3).
 
 
-File: docvENl8O.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
+File: plz.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
 
 3.4 0.8
 =======
@@ -431,7 +431,7 @@ File: docvENl8O.info,  Node: 08,  Next: 073,  Prev: 09,  Up: Changelog
      Scherer (https://github.com/r0man).)
 
 
-File: docvENl8O.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
+File: plz.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
 
 3.5 0.7.3
 =========
@@ -441,18 +441,18 @@ File: docvENl8O.info,  Node: 073,  Next: 072,  Prev: 08,  Up: Changelog
      longer committed to Git.)
 
 
-File: docvENl8O.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
+File: plz.info,  Node: 072,  Next: 071,  Prev: 073,  Up: Changelog
 
 3.6 0.7.2
 =========
 
 *Fixes*
-   • Don’t delete preexisting files when downloading to a file.  (#41
+   • Don't delete preexisting files when downloading to a file.  (#41
      (https://github.com/alphapapa/plz.el/pull/41).  Thanks to Joseph
      Turner (https://github.com/josephmturner).)
 
 
-File: docvENl8O.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
+File: plz.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
 
 3.7 0.7.1
 =========
@@ -462,7 +462,7 @@ File: docvENl8O.info,  Node: 071,  Next: 07,  Prev: 072,  Up: Changelog
      (https://github.com/hubisan) for reporting.)
 
 
-File: docvENl8O.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
+File: plz.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
 
 3.8 0.7
 =======
@@ -479,19 +479,19 @@ File: docvENl8O.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
 
    *Fixes*
    • Significant improvement in reliability by implementing failsafes
-     and workarounds for Emacs’s process-handling code.  (See #3
+     and workarounds for Emacs's process-handling code.  (See #3
      (https://github.com/alphapapa/plz.el/issues/3).)
    • STDERR output from curl processes is not included in response
-     bodies (which sometimes happened, depending on Emacs’s internal
+     bodies (which sometimes happened, depending on Emacs's internal
      race conditions).  (Fixes #23
      (https://github.com/alphapapa/plz.el/issues/23).)
    • Use ‘with-local-quit’ for synchronous requests (preventing Emacs
      from complaining sometimes).  (Fixes #26
      (https://github.com/alphapapa/plz.el/issues/26).)
    • Various fixes for ‘:as 'buffer’ result type: decode body when
-     appropriate; unset multibyte for binary; narrow to body; don’t kill
+     appropriate; unset multibyte for binary; narrow to body; don't kill
      buffer prematurely.
-   • When clearing a queue, don’t try to kill finished processes.
+   • When clearing a queue, don't try to kill finished processes.
 
    *Internal*
    • Response processing now happens outside the process sentinel, so
@@ -505,35 +505,35 @@ File: docvENl8O.info,  Node: 07,  Next: 06,  Prev: 071,  Up: Changelog
      are used instead.
 
 
-File: docvENl8O.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
+File: plz.info,  Node: 06,  Next: 054,  Prev: 07,  Up: Changelog
 
 3.9 0.6
 =======
 
 *Additions*
-   • Function ‘plz’’s ‘:body’ argument now accepts a list like ‘(file
+   • Function ‘plz’'s ‘:body’ argument now accepts a list like ‘(file
      FILENAME)’ to upload a file from disk (by passing the filename to
      curl, rather than reading its content into Emacs and sending it to
      curl through the pipe).
 
    *Fixes*
-   • Function ‘plz’’s docstring now mentions that the ‘:body’ argument
+   • Function ‘plz’'s docstring now mentions that the ‘:body’ argument
      may also be a buffer (an intentional feature that was accidentally
      undocumented).
    • Handle HTTP 3xx redirects when using ‘:as 'response’.
 
 
-File: docvENl8O.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
+File: plz.info,  Node: 054,  Next: 053,  Prev: 06,  Up: Changelog
 
 3.10 0.5.4
 ==========
 
 *Fixes*
-   • Only run queue’s ‘finally’ function after queue is empty.  (New
+   • Only run queue's ‘finally’ function after queue is empty.  (New
      features should not be designed and released on a Friday.)
 
 
-File: docvENl8O.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
+File: plz.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
 
 3.11 0.5.3
 ==========
@@ -544,37 +544,37 @@ File: docvENl8O.info,  Node: 053,  Next: 052,  Prev: 054,  Up: Changelog
      would require them to be recompiled after upgrading ‘plz’).
 
 
-File: docvENl8O.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
+File: plz.info,  Node: 052,  Next: 051,  Prev: 053,  Up: Changelog
 
 3.12 0.5.2
 ==========
 
 *Fixes*
-   • When clearing a queue, only call ‘plz-queue’’s ‘finally’ function
+   • When clearing a queue, only call ‘plz-queue’'s ‘finally’ function
      when specified.
 
 
-File: docvENl8O.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
+File: plz.info,  Node: 051,  Next: 05,  Prev: 052,  Up: Changelog
 
 3.13 0.5.1
 ==========
 
 *Fixes*
-   • Only call ‘plz-queue’’s ‘finally’ function when specified.  (Thanks
+   • Only call ‘plz-queue’'s ‘finally’ function when specified.  (Thanks
      to Dan Oriani (https://github.com/redchops) for reporting.)
 
 
-File: docvENl8O.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
+File: plz.info,  Node: 05,  Next: 04,  Prev: 051,  Up: Changelog
 
 3.14 0.5
 ========
 
 *Additions*
-   • Struct ‘plz-queue’’s ‘finally’ slot, a function called when the
+   • Struct ‘plz-queue’'s ‘finally’ slot, a function called when the
      queue is finished.
 
 
-File: docvENl8O.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
+File: plz.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
 
 3.15 0.4
 ========
@@ -601,7 +601,7 @@ File: docvENl8O.info,  Node: 04,  Next: 03,  Prev: 05,  Up: Changelog
    • Test suite also tests with Emacs versions 27.2, 28.1, and 28.2.
 
 
-File: docvENl8O.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
+File: plz.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
 
 3.16 0.3
 ========
@@ -613,11 +613,11 @@ File: docvENl8O.info,  Node: 03,  Next: 021,  Prev: 04,  Up: Changelog
      (https://github.com/sawyerzheng) for reporting.)
 
    *Fixes*
-   • Replaced words not in Ispell’s default dictionaries (so ‘checkdoc’
+   • Replaced words not in Ispell's default dictionaries (so ‘checkdoc’
      linting succeeds).
 
 
-File: docvENl8O.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
+File: plz.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
 
 3.17 0.2.1
 ==========
@@ -626,7 +626,7 @@ File: docvENl8O.info,  Node: 021,  Next: 02,  Prev: 03,  Up: Changelog
    • Handle when Curl process is interrupted.
 
 
-File: docvENl8O.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
+File: plz.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
 
 3.18 0.2
 ========
@@ -635,7 +635,7 @@ File: docvENl8O.info,  Node: 02,  Next: 01,  Prev: 021,  Up: Changelog
    • Simple request queueing.
 
 
-File: docvENl8O.info,  Node: 01,  Prev: 02,  Up: Changelog
+File: plz.info,  Node: 01,  Prev: 02,  Up: Changelog
 
 3.19 0.1
 ========
@@ -643,7 +643,7 @@ File: docvENl8O.info,  Node: 01,  Prev: 02,  Up: Changelog
 Initial release.
 
 
-File: docvENl8O.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
+File: plz.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up: Top
 
 4 Credits
 *********
@@ -654,7 +654,7 @@ File: docvENl8O.info,  Node: Credits,  Next: Development,  Prev: Changelog,  Up:
      invaluable advice, review, and encouragement.
 
 
-File: docvENl8O.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
+File: plz.info,  Node: Development,  Next: License,  Prev: Credits,  Up: Top
 
 5 Development
 *************
@@ -672,7 +672,7 @@ passing tests.
 * Copyright assignment::
 
 
-File: docvENl8O.info,  Node: Copyright assignment,  Up: Development
+File: plz.info,  Node: Copyright assignment,  Up: Development
 
 5.1 Copyright assignment
 ========================
@@ -682,11 +682,11 @@ being distributed in GNU ELPA (https://elpa.gnu.org/).  Contributions to
 this project must follow GNU guidelines, which means that, as with other
 parts of Emacs, patches of more than a few lines must be accompanied by
 having assigned copyright for the contribution to the FSF.  Contributors
-who wish to do so may contact emacs-devel@gnu.org <emacs-devel@gnu.org>
-to request the assignment form.
+who wish to do so may contact emacs-devel@gnu.org
+<mailto:emacs-devel@gnu.org> to request the assignment form.
 
 
-File: docvENl8O.info,  Node: License,  Prev: Development,  Up: Top
+File: plz.info,  Node: License,  Prev: Development,  Up: Top
 
 6 License
 *********
@@ -696,39 +696,39 @@ GPLv3
 
 
 Tag Table:
-Node: Top199
-Node: Installation1282
-Node: GNU ELPA1428
-Node: Manual1677
-Node: Usage1986
-Node: Examples2490
-Node: Functions3860
-Node: Queueing8159
-Node: Tips9545
-Node: Changelog9849
-Node: 010-pre10212
-Node: 09110483
-Node: 0910779
-Node: 0813691
-Node: 07314127
-Node: 07214336
-Node: 07114635
-Node: 0714851
-Node: 0616742
-Node: 05417356
-Node: 05317604
-Node: 05217925
-Node: 05118137
-Node: 0518394
-Node: 0418605
-Node: 0319579
-Node: 02120032
-Node: 0220186
-Node: 0120320
-Node: Credits20419
-Node: Development20788
-Node: Copyright assignment21305
-Node: License21896
+Node: Top195
+Node: Installation1268
+Node: GNU ELPA1408
+Node: Manual1651
+Node: Usage1952
+Node: Examples2450
+Node: Functions3814
+Node: Queueing8101
+Node: Tips9479
+Node: Changelog9775
+Node: 010-pre10132
+Node: 09110397
+Node: 0910687
+Node: 0813585
+Node: 07314015
+Node: 07214218
+Node: 07114509
+Node: 0714719
+Node: 0616596
+Node: 05417200
+Node: 05317440
+Node: 05217755
+Node: 05117959
+Node: 0518208
+Node: 0418411
+Node: 0319379
+Node: 02119824
+Node: 0219972
+Node: 0120100
+Node: Credits20193
+Node: Development20556
+Node: Copyright assignment21067
+Node: License21659
 
 End Tag Table
 

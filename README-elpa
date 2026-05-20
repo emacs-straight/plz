@@ -91,7 +91,7 @@ be simple and well-organized.  Every feature is tested against
   │   :body (json-encode '(("key" . "value")))
   │   :as #'json-read
   │   :then (lambda (alist)
-  │ 	  (message "Result: %s" (alist-get 'data alist))))
+  │           (message "Result: %s" (alist-get 'data alist))))
   └────
 
   ┌────
@@ -222,10 +222,10 @@ be simple and well-organized.  Every feature is tested against
 
   ┌────
   │ (let ((queue (make-plz-queue :limit 2
-  │ 			     :finally (lambda ()
-  │ 					(message "Queue empty."))))
+  │                              :finally (lambda ()
+  │                                         (message "Queue empty."))))
   │       (urls '("https://httpbin.org/get?foo=0"
-  │ 	      "https://httpbin.org/get?foo=1")))
+  │               "https://httpbin.org/get?foo=1")))
   │   (plz-run
   │    (dolist (url urls queue)
   │      (plz-queue queue 'get url

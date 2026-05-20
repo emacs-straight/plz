@@ -1,2 +1,2 @@
-;; Generated package description from plz.el  -*- mode: lisp-data; no-byte-compile: t -*-
-(define-package "plz" "0.10pre0.20250318.183534" "HTTP library" '((emacs "27.1")) :commit "e2d07838e3b64ee5ebe59d4c3c9011adefb7b58e" :authors '(("Adam Porter" . "adam@alphapapa.net")) :maintainer '("Adam Porter" . "adam@alphapapa.net") :keywords '("comm" "network" "http") :url "https://github.com/alphapapa/plz.el")
+;; Generated package description from plz.el  -*- no-byte-compile: t; lexical-binding:t -*-
+(define-package "plz" "0.100.20250318.183534" "HTTP library" '((emacs "27.1")) :commit "e2d07838e3b64ee5ebe59d4c3c9011adefb7b58e" :authors '(("Adam Porter" . "adam@alphapapa.net")) :maintainer '("Adam Porter" . "adam@alphapapa.net") :keywords '("comm" "network" "http") :url "https://github.com/alphapapa/plz.el")
